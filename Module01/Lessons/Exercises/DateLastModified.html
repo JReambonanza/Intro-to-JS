@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script>
+      function dateLastModified(){
+         var dateDiv = document.getElementById("modificationDate");
+         var date = document.lastModified;
+         dateDiv.innerHTML = date;
+      }
+      </script>
+
+  </head>
+
+  <body>
+  <p id="modificationDate">The document was last modified on :</p>
+  <button onclick = "dateLastModified()">Click Me!</button>
+   
+  </body>
+
+</html>

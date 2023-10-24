@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <script>
+        var students = new Array("John", "Ann", "Jane", "Moe");
+
+        Array.prototype.outputToConsole = function () {
+            for (i = 0; i < this.length; i++) {
+                console.log([i]);
+            }
+        };
+
+        students.outputToConsole();
+        console.log("This how many students in the array: ", students.length);
+
+        students.sort();
+        console.log("Sorted: ");
+        students.outputToConsole();
+
+        students.reverse();
+        console.log("Reversed: ");
+        students.outputToConsole();
+
+        students.pop();
+        console.log("One student removed: ");
+        students.outputToConsole();
+
+        students.push("David");
+        console.log("New student added: ");
+        students.outputToConsole();
+    </script>
+</head>
+
+<body></body>
+
+</html>

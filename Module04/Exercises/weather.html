@@ -1,0 +1,27 @@
+<html>
+<head>
+  <script>
+    async function fetchWeather(city) {
+      const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=575e142ed9ce401e210ed1416d861777`);
+      const data = await response.json();
+      if (data.cod === 200) {
+        document.getElementById('city-name').innerText = `Weather in ${data.name}`;
+        document.getElementById('weather-description').innerText = `Description: ${data.weather[0].description}`;
+      } else {
+        document.getElementById('city-name').innerText = `Could not fetch weather data for ${city}.`;
+      }
+    }
+  
+    function getWeather() {
+      const city = document.getElementById('city-input').value;
+      fetchWeather(city);
+    }
+  </script>
+</head>
+<body>
+  <input type="text" id="city-input" placeholder="Enter city name" />
+  <button onclick="getWeather()">Fetch Weather</button>
+  <h2 id="city-name"></h2>
+  <p id="weather-description"></p>
+</body>
+</html>

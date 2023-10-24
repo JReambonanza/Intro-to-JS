@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            //           function cToF(celsius) {
+            //               var cTemp = celsius;
+            //               var cToFahr = cTemp * 9 / 5 + 32;
+            //               var message = cTemp+'\xB0C is ' + cToFahr + ' \xB0F.';
+            //               console.log(message);
+            //           }
+            //
+            //           function fToC(fahrenheit) {
+            //               var fTemp = fahrenheit;
+            //               var fToCel = parseInt ( (fTemp - 32) * 5 / 9);
+            //               var message = fTemp+'\xB0F is ' + fToCel + '\xB0C.';
+            //               console.log(message);
+            //           } 
+            //           cToF(8);
+            //           fToC(100);
+
+            <title>Temperature Converter</title>
+            
+            function convertTemperature() {
+    // Step 2.1: Get the temperature from the input field
+    var temp = document.getElementById("temperature").value;
+
+    // Step 2.2: Convert the temperature string to a number
+    var tempNumber = Number(temp);
+
+    // Step 2.3: Get the selected unit (F or C)
+    var unitElement = document.querySelector('input[name="unit"]:checked');
+    var unit = unitElement.value;
+
+    // Step 2.4: Perform the conversion
+    var convertedTemp;
+    if (unit === "F") {
+      convertedTemp = (tempNumber - 32) * (5 / 9);
+    } else {
+      convertedTemp = (tempNumber * 9 / 5) + 32;
+    }
+
+    var convertedToUnit = unit === "F" ? "C" : "F";
+    // Step 2.5: Display the result
+    document.getElementById("result").innerText = "Converted Temperature: " + convertedToUnit.toFixed(2);
+   // `Converted Temperature: ${} ${}`;
+  }
+            
+     </script>
+    </head>
+    <body>
+        <h1>Temperature Converter</h1>
+
+        <form id="tempForm">
+          <label for="temperature">Temperature:</label>
+          <input type="number" id="temperature" name="temperature">
+          
+          <label>
+            <input type="radio" name="unit" value="F"> Fahrenheit
+          </label>
+      
+          <label>
+            <input type="radio" name="unit" value="C"> Celsius
+          </label>
+      
+          <input type="button" value="Convert" onclick="convertTemperature()">
+        </form>
+      
+        <p id="result"></p>
+
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+    function appendDate(){
+        var paragraph = document.getElementById("paragraph1");
+        
+        if(paragraph1){
+          paragraph.innerHTML = paragraph1.innerHTML + " " + Date();
+        }
+      }
+    </script>
+
+</head>
+<body>
+    <p id="paragraph1" >Today's Date and Time:</p>
+    <button onclick="appendDate()">Append Date</button>
+</body>
+
+</html>

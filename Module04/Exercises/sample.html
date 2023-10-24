@@ -1,0 +1,19 @@
+<html>
+    <head>
+    <script>
+        var questions = ["What is 2+2?", "What is the capital of France?"];
+        var answers = ["4", "Paris"];
+        var userAnswers = [];
+        
+        for(var i = 0; i < questions.length; i++) {
+            userAnswers[i] = prompt(questions[i]);//ask to input an answer
+            if(userAnswers[i].toLowerCase() === answers[i].toLowerCase()) {
+                document.write("Question " + (i+1) + " is correct.<br>");
+            } else {
+                document.write("Question " + (i+1) + " is incorrect.<br>");
+            }
+        }
+    </script>
+    </head>
+    <body></body>
+    </html>

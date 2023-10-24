@@ -1,0 +1,17 @@
+<html>
+
+<head>
+    <script>
+        async function getABC() {
+            let A = await getValueA(); // takes 3 seconds
+            let B = await getValueB(); // takes 5 seconds
+            let C = await getValueC(); // takes 4 seconds
+
+            return A * B * C;
+        }
+    </script>
+</head>
+
+<body></body>
+
+</html>

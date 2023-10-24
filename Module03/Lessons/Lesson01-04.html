@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <script>
+        let Computer = {
+            type: "PC",
+            os: "Windows",
+            memory: "16GB",
+            specs: function () {
+                return (
+                    "This a " +
+                    this.os +
+                    " " +
+                    this.type +
+                    " with " +
+                    this.memory +
+                    " of memory."
+                );
+            },
+        };
+        console.log(Computer.specs());
+    </script>
+</head>
+
+<body></body>
+
+</html>

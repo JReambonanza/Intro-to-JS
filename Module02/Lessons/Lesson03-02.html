@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        var name = "Mike"; // This is an outer variable
+
+        function GoodMorning() {
+            let greetings = "Good Morning!" + name; // This is a local variable
+
+            console.log(greetings);
+        }
+
+        GoodMorning();
+
+        // Local variables cannot be read from outside the function; therefore, the following will error out
+        console.log(greetings);
+    </script>
+</head>
+
+<body></body>
+
+</html>

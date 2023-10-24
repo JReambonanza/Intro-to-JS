@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <script>
+        // Declaring a Promise
+        let aPromise = new Promise(function (successful, error) {
+            // Some code goes in here
+
+            successful();
+            error();
+        });
+
+        // This is how to execute a Promise
+        aPromise.then(
+            function (value) {
+                // successful code
+            },
+            function (error) {
+                // error handling
+            }
+        );
+    </script>
+</head>
+
+<body></body>
+
+</html>

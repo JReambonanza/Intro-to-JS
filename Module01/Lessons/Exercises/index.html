@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script>
+        function changeOpenClose(){
+          var image = document.getElementById('image1');
+
+              if(image){
+                  image.src = "open.jpg";
+                }
+         }
+      </script>
+
+  </head>
+  <body>
+      <img id="image1" src="closed.jpg"/>
+      <button onclick="changeOpenClose()">Change Image</button>
+  </body>
+
+</html>

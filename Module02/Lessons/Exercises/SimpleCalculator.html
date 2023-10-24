@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+
+
+</head>
+<body>
+  <input type="number" id="number1" placeholder="First Number">
+  <input type="number" id="number2" placeholder="Second Number">
+  <button id="addButton">Add</button>
+  <button id="subtractButton">Subtract</button>
+  <button id="multiplyButton">Multiply</button>
+  <div id="result"></div>
+  <script type="text/javascript">
+    // Initialize Functions had to put down because the event listener is declared first
+
+
+    function addNumbers() {
+      const num1 = parseFloat(document.getElementById('number1').value);
+      const num2 = parseFloat(document.getElementById('number2').value);
+      console.log(num1);
+      const sum = num1 + num2;
+     
+      document.getElementById('result').innerText = `Result: ${sum}`;
+    }
+
+    function subtractNumbers() {
+      const num1 = parseFloat(document.getElementById('number1').value);
+      const num2 = parseFloat(document.getElementById('number2').value);
+      const difference = num1 - num2;
+      document.getElementById('result').innerText = `Result: ${difference}`;
+    }
+
+    function multiplyNumbers() {
+      const num1 = parseFloat(document.getElementById('number1').value);
+      const num2 = parseFloat(document.getElementById('number2').value);
+      const product = num1 * num2;
+      document.getElementById('result').innerText = `Result: ${product}`;
+    }
+
+    // Attach Events
+    document.getElementById('addButton').addEventListener('click', addNumbers);
+    document.getElementById('subtractButton').addEventListener('click', subtractNumbers);
+    document.getElementById('multiplyButton').addEventListener('click', multiplyNumbers);
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <script>
+        // Declaring a Promise
+        let aPromise = new Promise(function (successful, error) {
+            var myMoney = 100;
+
+            if (myMoney == 4) {
+                successful("Yes.");
+            } else {
+                error("Error");
+            }
+        });
+
+        // This is how to execute a Promise
+        aPromise.then(
+            function (value) {
+                logToConsole(value);
+            },
+            function (error) {
+                alert(error);
+            }
+        );
+
+        function logToConsole(something) {
+            console.log(something);
+        }
+    </script>
+</head>
+
+<body></body>
+
+</html>

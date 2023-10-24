@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <script>
+        // How to declare a function
+        function addXandY(x, y) {
+            return x + y;
+        }
+
+        var value = addXandY(4, 4);
+
+        // Many times we do not want to display the value in alerts
+        // This is a different way you will find beneficial in debugging in 
+        //the future
+        console.log(value);
+
+        // You could also use the keyword "function" to declare a function
+        const subtractXFromY = function (x, y) {
+            return y - x;
+        };
+
+        // You could call the function directly in you consule.log statement
+        console.log(subtractXFromY(4, 7));
+
+        // You could also use an arrow function expression to declare a function
+        const multiplyXByY = (x, y) => {
+            return x * y;
+        };
+
+        // And the result is
+        console.log(multiplyXByY(4, 7));
+    </script>
+</head>
+
+<body></body>
+
+</html>

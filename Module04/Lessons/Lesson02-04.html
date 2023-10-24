@@ -1,0 +1,15 @@
+<html>
+
+<head>
+    <script>
+        async function getABC() {
+            let results = await Promise.all([getValueA, getValueB, getValueC]);
+
+            return results.reduce((total, value) => total * value);
+        }
+    </script>
+</head>
+
+<body></body>
+
+</html>
